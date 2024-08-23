@@ -24,7 +24,9 @@ def fortune(birth_month):
 		return render_template("fortune.html", fortune=my_fortune[len(birth_month)-1])
 	else:
 		return render_template("home.html")
-
+@app.route('/main', methods ='POST')
+def user_name():
+	user_name = request.form['user_name']
 
 
 '''
