@@ -53,6 +53,7 @@ def signin():
 @app.route('/home',methods=['GET','POST'])
 def home():
   if request.method =='POST':
+    
     quote = request.form['quote']
     print(quote)
     session['quotes'].append(quote)
